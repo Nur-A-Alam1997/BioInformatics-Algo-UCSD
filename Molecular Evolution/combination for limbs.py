@@ -1,0 +1,67 @@
+f=open("DBL.txt","r")
+
+
+G={}
+for l in f:
+    p=((l.replace("->"," ").replace(":"," ").strip()).split())
+#     print(p[0],p[1],p[2])
+    
+#     print(l[0],l[3],l[5:])
+    
+    if p[0] not in G:
+        G[p[0]]={}
+        G[p[0]][p[1]]=int(p[2])
+    if p[0] in G:
+        G[p[0]][p[1]]=int(p[2])
+        
+        
+S={h:0 for h in G}        
+
+vis=[]
+q=[0]
+        
+while q:
+#     for val in range(len(G)):
+    z=str(q.pop(0))
+    p=0
+#     print("all",z)
+    if z not in vis:
+        
+#         print("current",z)
+        vis.append(str(z))
+        
+        for val in G[str(z)]:
+            
+            if val not in vis:
+                S[val]=S[z]+G[str(z)][val]
+#                 print("visited",vis)
+                q.extend(G[str(z)])
+#                 print("extended",q)
+
+
+
+# pair=set()
+def LimbR(i):
+    I=leaf[i]
+    for vals in leaf:
+        if I!=vals:
+            J=vals
+            k=(I,J)
+            print(k)
+    i=i+1
+    if I!=leaf[len(leaf)-1] and i<len(leaf):
+        LimbR(i)
+
+if __name__=="__main__":
+    
+    leaf=[0,1,2,3,4,5]
+    for c in G:
+        if len(G[c])==1:
+            print(LimbR(int(c)))
+            
+        
+    
+
+
+
+
