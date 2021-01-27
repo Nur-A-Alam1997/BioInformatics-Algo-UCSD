@@ -1,10 +1,5 @@
 # Generating Theoretical Spectrum Problem: Generate the theoretical spectrum 
 # of a cyclic peptide.
-#      Input: An amino acid string Peptide.
-#      Output: Cyclospectrum(Peptide).
-
-# CODE CHALLENGE: Solve the Generating Theoretical Spectrum Problem.
-
 # Sample Input:
 #      LEQN
 
