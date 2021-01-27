@@ -1,8 +1,5 @@
-# Generating Theoretical Spectrum Problem: Generate the theoretical spectrum 
-# of a cyclic peptide.
 # Sample Input:
 #      LEQN
-
 # Sample Output:
 #      0 113 114 128 129 227 242 242 257 355 356 370 371 484
 
